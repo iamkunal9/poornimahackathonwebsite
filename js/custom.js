@@ -1,44 +1,34 @@
 
+var __sf = $(".sponsorsFooter ul span");
+var __sf_cont = $(".sponsorsFooter ul");
+var __title = $("#sponsorTitle");
+
+__sf.mouseenter(function() {
+  $(this).addClass('hover');
+  __sf_cont.addClass('enter');
+  var __setTitle = $(this).attr("data-group-title");
+  __title.html(__setTitle);
+}).mouseleave(function() {
+  $(this).removeClass('hover');
+  __sf_cont.removeClass('enter');
+  var __setTitle = $(__title).attr("data-default-title");
+  __title.html(__setTitle);
+});
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: false,
+        itemWidth: 170,
+        itemMargin: 1,
+        pausePlay: true,
+      });
+    });
+
+
+
+
 function next(){
 document.querySelector(".sl-next").click();
 setTimeout(next,10000);
 }
 next();
-
-let dayBox = document.getElementById("day-box");
-let hrBox = document.getElementById("hr-box");
-let minBox = document.getElementById("min-box");
-let secBox = document.getElementById("sec-box");
-let endDate = new Date(2023, 2, 1, 00, 00);
-let endTime = endDate.getTime();
-
-function countdown() {
-  let todayDate = new Date();
-  let todayTime = todayDate.getTime();
-  let remainingTime = endTime - todayTime;
-  let oneMin = 60 * 1000;
-  let oneHr = 60 * oneMin;
-  let oneDay = 24 * oneHr;
-
-  let addZeroes = (num) => (num < 10 ? `0${num}` : num);
-
-  if (endTime < todayTime) {
-    clearInterval(i);
-    document.querySelector(
-      ".countdown"
-    ).innerHTML = `<h1>Countdown Has Expired</h1>`;
-  } else {
-    let daysLeft = Math.floor(remainingTime / oneDay);
-    let hrsLeft = Math.floor((remainingTime % oneDay) / oneHr);
-    let minsLeft = Math.floor((remainingTime % oneHr) / oneMin);
-    let secsLeft = Math.floor((remainingTime % oneMin) / 1000);
-
-    dayBox.textContent = addZeroes(daysLeft);
-    hrBox.textContent = addZeroes(hrsLeft);
-    minBox.textContent = addZeroes(minsLeft);
-    secBox.textContent = addZeroes(secsLeft);
-  }
-}
-
-let i = setInterval(countdown, 1000);
-countdown();

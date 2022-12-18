@@ -155,15 +155,15 @@
 
 .bg-img-1 {
 	background-image: url(../img/slider/1.jpeg);
-	background-size: auto;
 }
 .bg-img-2 {
 	background-image: url(../img/slider/2.jpeg);
-	background-size: auto;
 }
 .bg-img-3 {
-	background-image: url(../img/slider/1.jpeg);
-	background-size: auto;
+	background-image: url(../img/slider/3.jpg);
+}
+.bg-img-4 {
+	background-image: url(../img/slider/4.jpg);
 }
 
 

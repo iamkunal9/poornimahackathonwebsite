@@ -1,520 +1,973 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-    <head>
-    	<!-- meta character set -->
-        <meta charset="utf-8">
-		<!-- Always force latest IE rendering engine or request Chrome Frame -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Smart City Hackthon</title>		
-		<!-- Meta Description -->
-        <meta name="description" content="Blue One Page Creative HTML5 Template">
-        <meta name="keywords" content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
-        <meta name="author" content="Muhammad Morshed">
-		
-		<!-- Mobile Specific Meta -->
-		
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<!-- CSS
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <!-- meta character set -->
+  <meta charset="utf-8" />
+  <!-- Always force latest IE rendering engine or request Chrome Frame -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Smart City Hackthon</title>
+  <!-- Meta Description -->
+  <meta name="description" content="Blue One Page Creative HTML5 Template" />
+  <meta name="keywords"
+    content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation" />
+  <meta name="author" content="Muhammad Morshed" />
+
+  <!-- Mobile Specific Meta -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS
 		================================================== -->
-		
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-		
-		<!-- Fontawesome Icon font -->
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-		<!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/jquery.fancybox.css">
-		<!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-		<!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/owl.carousel.css">
-		<!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/slit-slider.css">
-		<!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/animate.css">
-		<!-- Main Stylesheet -->
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/main2.css">
 
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css" />
 
-		<!-- Modernizer Script for old Browsers -->
-        <script src="js/modernizr-2.6.2.min.js"></script>
+  <!-- Fontawesome Icon font -->
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="fonts/fonts-line-icons.css" />
 
-    </head>
-	
-    <body id="body">
+  <!-- bootstrap.min -->
+  <link rel="stylesheet" href="css/jquery.fancybox.css" />
+  <link rel="stylesheet" href="css/main2.css" />
+
+  <!-- bootstrap.min -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- bootstrap.min -->
+  <link rel="stylesheet" href="css/owl.carousel.css" />
+  <!-- bootstrap.min -->
+  <link rel="stylesheet" href="css/slit-slider.css" />
+  <!-- bootstrap.min -->
+  <link rel="stylesheet" href="css/animate.css" />
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/main.css" />
+
+  <!-- Modernizer Script for old Browsers -->
+  <script src="js/modernizr-2.6.2.min.js"></script>
+</head>
 <style>
-    .dataTables_info{
-        padding-top: 10px;
-        padding-bottom: 20px;
-    }
-    .dataTables_paginate{
-        padding-bottom: 20px;   
-    }
-</style>
-		<!-- preloader -->
-		<div id="preloader">
-            <div class="loder-box">
-            	<div class="battery"></div>
-            </div>
-		</div>
-		<!-- end preloader -->
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
-        <!--
+.dataTables_paginate{
+    padding-top: 20px !important;
+    padding-bottom: 10px;
+
+}
+
+  @media only screen and (max-width: 600px) {
+    table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+    #two{
+      display: block !important;
+    }
+    #fqdisp{
+      display: table-row !important;
+    }
+    #knowmorebtn {
+      display: none;
+    }
+
+    .bg-img-1 {
+      background-image: url(../img/slider/android/1.jpeg);
+      background-size: 100% 100%;
+    }
+
+    .bg-img-2 {
+      background-image: url(../img/slider/android/2.jpeg);
+      background-size: 100% 100%;
+    }
+
+    .bg-img-3 {
+      background-image: url(../img/slider/android/1.jpeg);
+      background-size: 100% 100%;
+    }
+  }
+
+  #body {
+    width: 100%;
+  }
+</style>
+
+<body id="body">
+  <!-- preloader -->
+  <div id="preloader">
+    <div class="loder-box">
+      <div class="battery"></div>
+    </div>
+  </div>
+  <!-- end preloader -->
+
+  <!--
         Fixed Navigation
         ==================================== -->
-        <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
-            <div class="container">
-                <div class="navbar-header">
-                    <!-- responsive nav button -->
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-                    </button>
-					<!-- /responsive nav button -->
-					
-					<!-- logo -->
-					<img src="https://media.discordapp.net/attachments/994237473460854804/1052282518478528512/image-removebg-preview.png" style="
-    width: 12rem;
-    height: auto;
-">
-					<!-- /logo -->
-                </div>
+  <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- responsive nav button -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- /responsive nav button -->
 
-				<!-- main nav -->
-                <nav class="collapse navbar-collapse navbar-right" role="navigation">
-                    <ul id="nav" class="nav navbar-nav">
-                        <li><a href="#" onclick="javascript:location.href='index.html'">Home</a></li>
-                        <li><a href="#service">Problem Statements</a></li>
-                        <li><a href="#portfolio">Gallery</a></li>
-                        <li><a href="#testimonials">Testimonial</a></li>
-                        <li><a href="#fq">FAQ</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-				<!-- /main nav -->
-				
-            </div>
-        </header>
-        <!--
+        <!-- logo -->
+        <img
+          src="https://media.discordapp.net/attachments/994237473460854804/1052282518478528512/image-removebg-preview.png"
+          style="width: 12rem; height: auto" />
+        <!-- /logo -->
+      </div>
+
+      <!-- main nav -->
+      <nav class="collapse navbar-collapse navbar-right" role="navigation">
+        <ul id="nav" class="nav navbar-nav">
+          <li><a href="#" onclick="javascript:location.href='index.html'">Home</a></li>
+          <li>
+            <a href="#prblm">Problem Statements</a>
+          </li>
+          <li><a href="#prize">Prize</a></li>
+          <li><a href="#testimonials">Sponsor</a></li>
+          <!-- <li><a href="#gallery">Gallery</a></li> -->
+          <li><a href="#fq">FAQ</a></li>
+          <li><a href="#rules">Rules</a></li>
+
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- /main nav -->
+    </div>
+  </header>
+  <!--
         End Fixed Navigation
         ==================================== -->
-		
-		<main class="site-content" role="main">
-		
-        <!--
+
+  <main class="site-content" role="main">
+    <!--
         Home Slider
         ==================================== -->
-		
-		<section id="home-slider">
-            <div id="slider" class="sl-slider-wrapper">
 
-				<div class="sl-slider">
-				
-					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+    <section id="home-slider">
+      <div id="slider" class="sl-slider-wrapper">
+        <div class="sl-slider">
+          <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25"
+            data-slice1-scale="2" data-slice2-scale="2">
+            <div class="bg-img bg-img-1"></div>
 
-						<div class="bg-img bg-img-1"></div>
-
-						<div class="slide-caption">
-                            <div class="caption-content">
-                                <!-- <h2 class="animated fadeInDown">Smart City Hackathon 2.0</h2>
+            <div class="slide-caption">
+              <div class="caption-content">
+                <!-- <h2 class="animated fadeInDown">Smart City Hackathon 2.0</h2>
                                 <span class="animated fadeInDown">Lets create something that will change this world</span> -->
-                                <a href="#service" class="btn btn-blue btn-effect">Know More</a>
-                            </div>
-                        </div>
-						
-					</div>
-					
-					<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
-					
-						<div class="bg-img bg-img-2"></div>
-						<div class="slide-caption">
-                            <div class="caption-content">
-                                <!-- <h2>Smart City Hackathon 2.0</h2>
+                <a href="#service" id="knowmorebtn" class="btn btn-blue btn-effect">Know More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15"
+            data-slice1-scale="1.5" data-slice2-scale="1.5">
+            <div class="bg-img bg-img-2"></div>
+            <div class="slide-caption">
+              <div class="caption-content">
+                <!-- <h2>Smart City Hackathon 2.0</h2>
                                 <span>Lets create something that will </span> -->
-                                <a href="#service" class="btn btn-blue btn-effect">Know More</a>
-                            </div>
-                        </div>
-						
-					</div>
-					
-					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
-						
-						<div class="bg-img bg-img-3"></div>
-						<div class="slide-caption">
-                            <div class="caption-content">
-                                <!-- <h2>Smart City Hackathon 2.0</h2>
+                <a href="#service" id="knowmorebtn" class="btn btn-blue btn-effect">Know More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3"
+            data-slice1-scale="2" data-slice2-scale="1">
+            <div class="bg-img bg-img-3"></div>
+            <div class="slide-caption">
+              <div class="caption-content">
+                <!-- <h2>Smart City Hackathon 2.0</h2>
                                 <span>Clean and Professional one page Template</span> -->
-                                <a href="#service" class="btn btn-blue btn-effect">Know More</a>
-                            </div>
-                        </div>
+                <a href="#service" id="knowmorebtn" class="btn btn-blue btn-effect">Know More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /sl-slider -->
 
-					</div>
-
-				</div><!-- /sl-slider -->
-
-                <!-- 
+        <!-- 
                 <nav id="nav-arrows" class="nav-arrows">
                     <span class="nav-arrow-prev">Previous</span>
                     <span class="nav-arrow-next">Next</span>
                 </nav>
                 -->
-                
-                <nav id="nav-arrows" class="nav-arrows hidden-xs hidden-sm visible-md visible-lg">
-                    <a href="javascript:;" class="sl-prev">
-                        <i class="fa fa-angle-left fa-3x"></i>
-                    </a>
-                    <a href="javascript:;" class="sl-next">
-                        <i class="fa fa-angle-right fa-3x"></i>
-                    </a>
-                </nav>
-                
 
-				<nav id="nav-dots" class="nav-dots visible-xs visible-sm hidden-md hidden-lg">
-					<span class="nav-dot-current"></span>
-					<span></span>
-					<span></span>
-				</nav>
+        <nav id="nav-arrows" class="nav-arrows hidden-xs hidden-sm visible-md visible-lg">
+          <a href="javascript:;" class="sl-next">
+            <i class="fa fa-angle-right fa-3x"></i>
+          </a>
+        </nav>
 
-			</div><!-- /slider-wrapper -->
-		</section>
+        <nav id="nav-dots" class="nav-dots visible-xs visible-sm hidden-md hidden-lg">
+          <span class="nav-dot-current"></span>
+          <span></span>
+          <span></span>
+        </nav>
+      </div>
+      <!-- /slider-wrapper -->
+    </section>
+
+    <!--
+        End Home SliderEnd
+        ==================================== -->
+        <div class="container" id="prblm">
+            <div class="row" style="margin: 1px 1px;">
+      
+              <table id="example"  class="table table-striped table-bordered" cellspacing="0" width="100%">
+                <thead>
+                  <tr>
+                    <th>S.No.</th>
+                    <th>Organization</th>
+                    <th>Problem Statement Title</th>
+                    <th>Category</th>
+                    <th>Domain</th>
+                    <th>PS ID</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011/04/25</td>
+                    <td>$320,800</td>
+                  </tr>
+      
+                </tbody>
+              </table>
+      
+            </div>
+          </div>
+    <!-- end portfolio section -->
+
+    <!-- Testimonial section -->
+    <section id="testimonials" class="parallax">
+      <div class="overlay">
         <div class="container">
-		<div class="row">
+          
+          <div class="row">
+            <div class='sponsorsFooter'>
+
+              <h1 id="sponsorTitle" style="font-size: 3rem;" data-default-title="<strong>Our Sponsors</strong>"><strong>Our Sponsors</strong>
+              </h1>
+              <ul>
+
+                <span data-group-title="Gold Sponsor">
+
+                  <li><img src="img/sponsors/idealab.png"></li>
+                </span>
+                <span data-group-title="Silver Sponsors">
+                  <li><img src="img/sponsors/idealab.png"></li>
+                  <li><img src="img/sponsors/idealab.png"></li>
+                </span>
+                <span data-group-title="Bronze Sponsors">
+                  <li><img src="img/sponsors/idealab.png"></li>
+                  <li><img src="img/sponsors/idealab.png"></li>
+                  <li><img src="img/sponsors/idealab.png"></li>
+                </span>
+              </ul>
+            </div>
+          </div>
+          <center>
+          <p style="font-size: 2rem; padding-bottom: 5px; color: #212121;">Meet Our</p>
+          <b style="font-size: 2.5rem; color: #212121;">COLLABORATORS</b></center><br>
+          <section class="slider">
+            <div class="flexslider carousel">
+              <ul class="slides">
+                <li>
+                  <img src="img/sponsors/hindustan.jpg" />
+                </li>
+                <li>
+                  <img src="img/sponsors/redhat.jpg" />
+                </li>
+                <li>
+                  <img src="img/sponsors/tmahindra.jpg" />
+                </li>
+                <li>
+                  <img src="img/sponsors/ultratech.jpg" />
+                </li>
+                <li>
+                  <img src="img/sponsors/zomato.jpg" />
+                </li>
+                <li>
+                  <img src="img/sponsors/wipro.jpg" />
+                </li>
+                <li>
+                  <img src="img/sponsors/ultratech.jpg" />
+                </li>
+                <li>
+                  <img src="img/sponsors/tmahindra.jpg" />
+                </li>
+                <li>
+                  <img src="img/sponsors/tmahindra.jpg" />
+                </li>
+                <li>
+                  <img src="img/sponsors/tmahindra.jpg" />
+                </li>
+                <li>
+                  <img src="img/sponsors/tmahindra.jpg" />
+                </li>
+                <li>
+                  <img src="img/sponsors/tmahindra.jpg" />
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <!-- end Testimonial section -->
     
-            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
-              <thead>
-                <tr>
-                  <th>S.No.</th>
-                  <th>Organization</th>
-                  <th>Problem Statement Title</th>
-                  <th>Category</th>
-                  <th>Domain</th>
-                  <th>PS ID</th>
-                </tr>
-              </thead>
-              <tfoot>
-                <tr>
-                  <th>Name</th>
-                  <th>Position</th>
-                  <th>Office</th>
-                  <th>Age</th>
-                  <th>Start date</th>
-                  <th>Salary</th>
-                </tr>
-              </tfoot>
-              <tbody>
-                <tr>
-                  <td>Tiger Nixon</td>
-                  <td>System Architect</td>
-                  <td>Edinburgh</td>
-                  <td>61</td>
-                  <td>2011/04/25</td>
-                  <td>$320,800</td>
-                </tr>
-                <tr>
-                  <td>Garrett Winters</td>
-                  <td>Accountant</td>
-                  <td>Tokyo</td>
-                  <td>63</td>
-                  <td>2011/07/25</td>
-                  <td>$170,750</td>
-                </tr>
-                <tr>
-                  <td>Ashton Cox</td>
-                  <td>Junior Technical Author</td>
-                  <td>San Francisco</td>
-                  <td>66</td>
-                  <td>2009/01/12</td>
-                  <td>$86,000</td>
-                </tr>
-                <tr>
-                  <td>Cedric Kelly</td>
-                  <td>Senior Javascript Developer</td>
-                  <td>Edinburgh</td>
-                  <td>22</td>
-                  <td>2012/03/29</td>
-                  <td>$433,060</td>
-                </tr>
-                <tr>
-                  <td>Airi Satou</td>
-                  <td>Accountant</td>
-                  <td>Tokyo</td>
-                  <td>33</td>
-                  <td>2008/11/28</td>
-                  <td>$162,700</td>
-                </tr>
-                <tr>
-                  <td>Brielle Williamson</td>
-                  <td>Integration Specialist</td>
-                  <td>New York</td>
-                  <td>61</td>
-                  <td>2012/12/02</td>
-                  <td>$372,000</td>
-                </tr>
-                <tr>
-                  <td>Herrod Chandler</td>
-                  <td>Sales Assistant</td>
-                  <td>San Francisco</td>
-                  <td>59</td>
-                  <td>2012/08/06</td>
-                  <td>$137,500</td>
-                </tr>
-                <tr>
-                  <td>Rhona Davidson</td>
-                  <td>Integration Specialist</td>
-                  <td>Tokyo</td>
-                  <td>55</td>
-                  <td>2010/10/14</td>
-                  <td>$327,900</td>
-                </tr>
-                <tr>
-                  <td>Colleen Hurst</td>
-                  <td>Javascript Developer</td>
-                  <td>San Francisco</td>
-                  <td>39</td>
-                  <td>2009/09/15</td>
-                  <td>$205,500</td>
-                </tr>
-                <tr>
-                  <td>Sonya Frost</td>
-                  <td>Software Engineer</td>
-                  <td>Edinburgh</td>
-                  <td>23</td>
-                  <td>2008/12/13</td>
-                  <td>$103,600</td>
-                </tr>
-                <tr>
-                  <td>Jena Gaines</td>
-                  <td>Office Manager</td>
-                  <td>London</td>
-                  <td>30</td>
-                  <td>2008/12/19</td>
-                  <td>$90,560</td>
-                </tr>
-                <tr>
-                  <td>Quinn Flynn</td>
-                  <td>Support Lead</td>
-                  <td>Edinburgh</td>
-                  <td>22</td>
-                  <td>2013/03/03</td>
-                  <td>$342,000</td>
-                </tr>
-                <tr>
-                  <td>Charde Marshall</td>
-                  <td>Regional Director</td>
-                  <td>San Francisco</td>
-                  <td>36</td>
-                  <td>2008/10/16</td>
-                  <td>$470,600</td>
-                </tr>
-                <tr>
-                  <td>Haley Kennedy</td>
-                  <td>Senior Marketing Designer</td>
-                  <td>London</td>
-                  <td>43</td>
-                  <td>2012/12/18</td>
-                  <td>$313,500</td>
-                </tr>
-                <tr>
-                  <td>Tatyana Fitzpatrick</td>
-                  <td>Regional Director</td>
-                  <td>London</td>
-                  <td>19</td>
-                  <td>2010/03/17</td>
-                  <td>$385,750</td>
-                </tr>
-                <tr>
-                  <td>Michael Silva</td>
-                  <td>Marketing Designer</td>
-                  <td>London</td>
-                  <td>66</td>
-                  <td>2012/11/27</td>
-                  <td>$198,500</td>
-                </tr>
-                <tr>
-                  <td>Paul Byrd</td>
-                  <td>Chief Financial Officer (CFO)</td>
-                  <td>New York</td>
-                  <td>64</td>
-                  <td>2010/06/09</td>
-                  <td>$725,000</td>
-                </tr>
-                <tr>
-                  <td>Gloria Little</td>
-                  <td>Systems Administrator</td>
-                  <td>New York</td>
-                  <td>59</td>
-                  <td>2009/04/10</td>
-                  <td>$237,500</td>
-                </tr>
-                <tr>
-                  <td>Bradley Greer</td>
-                  <td>Software Engineer</td>
-                  <td>London</td>
-                  <td>41</td>
-                  <td>2012/10/13</td>
-                  <td>$132,000</td>
-                </tr>
-                <tr>
-                  <td>Dai Rios</td>
-                  <td>Personnel Lead</td>
-                  <td>Edinburgh</td>
-                  <td>35</td>
-                  <td>2012/09/26</td>
-                  <td>$217,500</td>
-                </tr>
-                <tr>
-                  <td>Jenette Caldwell</td>
-                  <td>Development Lead</td>
-                  <td>New York</td>
-                  <td>30</td>
-                  <td>2011/09/03</td>
-                  <td>$345,000</td>
-                </tr>
-           
-              </tbody>
-            </table>
-        
-          </div></div>
-			<!-- Social section -->
-			<!-- <section id="social" class="parallax">
-				<div class="overlay">
-					<div class="container">
-						<div class="row">
+
+    <!-- Price section -->
+
+    <section id="prize">
+      <h2 style="text-align: center; font-size: 5rem;">
+        Prize
+      </h2><br>
+
+
+      <div class="container-fluids">
+        <div class="row text-center">
+          <div class="col-md-5">
+            <img src="img/icons/trophy.gif" style="width:23rem">
+          </div>
+
+          <div class="col-md-7">
+            <h2 style="font-family: 'Josefin Sans', sans-serif;">WIN EXCITING PRIZES WORTH <br>Rs. 1 LAKHS 50 THOUSAND *
+            </h2>
+            <hr style="border: 1px solid red;width: 80px;">
+            <p style="font-size: 18px;">1st Prize : <b>51,000 /- *</b> </p>
+            <p style="font-size: 18px;">2nd Prize : <b>31,000 /- *</b></p>
+            <p style="font-size: 18px;">3rd Prize : <b>21,000 /- *</b></p>
+          </div>
+
+        </div>
+      </div>
+      <!-- <div class="container">
+          <div class="row">
+            <div class="sec-title text-center wow animated fadeInDown">
+              <h2>Prize</h2>
+              <p>Exciting Cash Rewards for winners</p>
+            </div>
+			<div style="display: grid; align-content: center; justify-items: center;">
+            <div class="col-md-4 wow animated fadeInUp">
+				<table style="border-spacing: 10px;">
+					<tr>
 						
-							<div class="sec-title text-center white wow animated fadeInDown">
-								<h2>FOLLOW US</h2>
-								<p>Beautifully simple follow buttons to help you get followers on</p>
-							</div>
-							
-							<ul class="social-button">
-								<li class="wow animated zoomIn"><a href="#"><i class="fa fa-thumbs-up fa-2x"></i></a></li>
-								<li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
-								<li class="wow animated zoomIn" data-wow-delay="0.6s"><a href="#"><i class="fa fa-dribbble fa-2x"></i></a></li>							
-							</ul>
-							
-						</div>
-					</div>
-				</div>
-			</section> -->
-			<!-- end Social section -->
-			
-			<!-- Contact section -->
-			<section id="contact" >
-				<div class="container">
-					<div class="row">
-						
-						<div class="sec-title text-center wow animated fadeInDown">
-							<h2>Contact</h2>
-							<p>Leave a Message</p>
-						</div>
-						
-						
-						<div class="col-md-7 contact-form wow animated fadeInLeft">
-							<form action="#" method="post">
-								<div class="input-field">
-									<input type="text" name="name" class="form-control" placeholder="Your Name...">
-								</div>
-								<div class="input-field">
-									<input type="email" name="email" class="form-control" placeholder="Your Email...">
-								</div>
-								<div class="input-field">
-									<input type="text" name="subject" class="form-control" placeholder="Subject...">
-								</div>
-								<div class="input-field">
-									<textarea name="message" class="form-control" placeholder="Messages..."></textarea>
-								</div>
-						       	<button type="submit" id="submit" class="btn btn-blue btn-effect">Send</button>
-							</form>
-						</div>
-						
-						<div class="col-md-5 wow animated fadeInRight">
-							<address class="contact-details">
-								<h3>Contact Us</h3>						
-								<p><i class="fa fa-pencil"></i>Team<span>Poornima Hackathon</span> <span>2023 </span><span>India</span></p><br>
-								<p><i class="fa fa-phone"></i>Phone: +91 9413465367 </p>
-								<p><i class="fa fa-envelope"></i>piet.hackathon@poornima.org</p>
-							</address>
-						</div>
-			
-					</div>
-				</div>
-			</section>
-			<!-- end Contact section -->
-			
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.2661704535194!2d75.84818715023573!3d26.76778417267639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dc91e898380fd%3A0xeee859ae1f1b64b0!2sPoornima%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1668529773080!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-		
-		</main>
-		
-		<footer id="footer">
-			<div class="container">
-				<div class="row text-center">
-					<div class="footer-content">
-						<div class="wow animated fadeInDown">
-							<p>newsletter signup</p>
-							<p>Get Cool Stuff! We hate spam!</p>
-						</div>
-						<form action="#" method="post" class="subscribe-form wow animated fadeInUp">
-							<div class="input-field">
-								<input type="email" class="subscribe form-control" placeholder="Enter Your Email...">
-								<button type="submit" class="submit-icon">
-									<i class="fa fa-paper-plane fa-lg"></i>
-								</button>
-							</div>
-						</form>
-						<div class="footer-social">
-							<ul>
-								<li class="wow animated zoomIn"><a href="#"><i class="fa fa-thumbs-up fa-3x"></i></a></li>
-								<li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="#"><i class="fa fa-twitter fa-3x"></i></a></li>
-								<li class="wow animated zoomIn" data-wow-delay="0.6s"><a href="#"><i class="fa fa-skype fa-3x"></i></a></li>
-								<li class="wow animated zoomIn" data-wow-delay="0.9s"><a href="#"><i class="fa fa-dribbble fa-3x"></i></a></li>
-								<li class="wow animated zoomIn" data-wow-delay="1.2s"><a href="#"><i class="fa fa-youtube fa-3x"></i></a></li>
-							</ul>
-						</div>
-						
-						<p>Copyright &copy; 2021-2022 Design and Developed By<a href="http://iamkunal9.github.io/links/">iamkunal9</a> </p>
-					</div>
-				</div>
-			</div>
-		</footer>
-		
-		<!-- Essential jQuery Plugins
+						<td><img src="img/icons/trophy.gif" style="padding-right: 10px;"></td>
+						<td><h3>Win exciting rewards</h3></td>
+
+					</tr>
+				</table>
+            </div>
+		</div> -->
+
+      <!-- <div class="col-md-4 wow animated fadeInUp" data-wow-delay="0.8s">
+              <div class="price-table text-center">
+                <span>Diamond</span>
+                <div class="value">
+                  <span>$</span>
+                  <span>123,12</span><br />
+                  <span>month</span>
+                </div>
+                <ul>
+                  <li>All Bonus Points</li>
+                  <li>All Bonus Points</li>
+                  <li>All Bonus Points</li>
+                  <li>All Bonus Points</li>
+                  <li><a href="#">sign up</a></li>
+                </ul>
+              </div>
+            </div> -->
+      </div>
+      </div>
+    </section>
+    <!-- <section id="faq" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title-header text-center">
+              <h1 class="section-title wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">Frequently Asked Question?</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12">
+            <div class="accordion">
+               
+    
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <div class="header-title collapsed" data-toggle="collapse" data-target="#questionSix_1" aria-expanded="false" aria-controls="questionSix_1">
+                        <i class="lni-pencil"></i>  What is the Hackathon?									</div>
+                    </div>
+                    <div id="questionSix_1" class="collapse" aria-labelledby="headingThree" data-parent="#question" style="">
+                      <div class="card-body">
+                        <p><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">Participants typically form groups of about 2-6 individuals, take out their laptops(if the event is technology themed), and dive into problems. Training workshops are a great parallel track especially for newcomers but also for all participants. The main purpose of hackathon is:</span><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">1.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">Getting students interested in coding.</span><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">2.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">Turning ideas into reality.</span><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">3.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">Making students come in the team, coordinate with each other and work in a competitive environment.</span><br></p>									</div>
+                    </div>
+                  </div> 
+    
+                  
+                   
+    
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <div class="header-title" data-toggle="collapse" data-target="#questionSix_2" aria-expanded="false" aria-controls="questionSix_2">
+                        <i class="lni-pencil"></i> How do we Submit our idea?									</div>
+                    </div>
+                    <div id="questionSix_2" class="collapse" aria-labelledby="headingThree" data-parent="#question">
+                      <div class="card-body">
+                        <p><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">PLEASE NOTE:</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">&nbsp;Idea submission must be made the team leader of a team only.</span><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">1.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">One Team can submit ONLY ONE Idea</span><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">2.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">Submission dates should be strictly followed. No exceptions will be made.</span><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">3.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">Participants should submit their innovation by filling a form available on website.</span><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">4.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">After filling the form which is in pdf format they have to submit it.</span><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">5.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">Entries to be sent only in the prescribed format; otherwise, they are bound to get rejected.</span><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">6.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">Requests for changes in the Ideas post the cut off date shall not be entertained. Teams will not be edit any team details once the form is submitted.</span><br></p>									</div>
+                    </div>
+                  </div> 
+    
+                  
+                   
+    
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <div class="header-title" data-toggle="collapse" data-target="#questionSix_3" aria-expanded="false" aria-controls="questionSix_3">
+                        <i class="lni-pencil"></i> What is the selection criteria?									</div>
+                    </div>
+                    <div id="questionSix_3" class="collapse" aria-labelledby="headingThree" data-parent="#question">
+                      <div class="card-body">
+                        <p><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">Evaluation criteria will include novelty of the idea, complexity, clarity, and details in the prescribed format, feasibility, practicability, sustainability, the scale of impact, user experience and potential for future work progression</span><br></p>									</div>
+                    </div>
+                  </div> 
+    
+                  
+                   
+    
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <div class="header-title" data-toggle="collapse" data-target="#questionSix_4" aria-expanded="false" aria-controls="questionSix_4">
+                        <i class="lni-pencil"></i> What is the Judgment criteria?									</div>
+                    </div>
+                    <div id="questionSix_4" class="collapse" aria-labelledby="headingThree" data-parent="#question">
+                      <div class="card-body">
+                        <p><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">The judging of the hackathon is generally based on the demo presentation given by the team.</span><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">the 4 main judge decides the final winner according to the different criteria such as:-</span><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">1.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">visibility</span><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">2.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">Awesomeness</span><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">3.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">Technological Stack</span><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">4.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">Impact Created</span><br></p>									</div>
+                    </div>
+                  </div> 
+    
+                  
+                   
+    
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <div class="header-title" data-toggle="collapse" data-target="#questionSix_5" aria-expanded="false" aria-controls="questionSix_5">
+                        <i class="lni-pencil"></i> Methodology									</div>
+                    </div>
+                    <div id="questionSix_5" class="collapse" aria-labelledby="headingThree" data-parent="#question">
+                      <div class="card-body">
+                        <p><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">1.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">The participants will have to choose the problem statement and register themself in the contest. The participants will be given to solve the real-time technical problems face by various institutes and college.</span><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">2.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">They have to submit the proposal of their Problem statement which they will select. Then the students have to register for the Hackathon which will be the Grand Finale where they have to stay in the college and code here for 24 Hrs.</span><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">3.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">Hackathon will be onsite and there will NO registration charge.</span><br></p>									</div>
+                    </div>
+                  </div> 
+    
+                  
+                   
+    
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <div class="header-title" data-toggle="collapse" data-target="#questionSix_6" aria-expanded="false" aria-controls="questionSix_6">
+                        <i class="lni-pencil"></i>  How should we form a team?									</div>
+                    </div>
+                    <div id="questionSix_6" class="collapse" aria-labelledby="headingThree" data-parent="#question">
+                      <div class="card-body">
+                        <p><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">1.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">All team members should be from the same college; no inter-college teams are allowed However, members from different branches of the same college can form a team.</span><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">2.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">Each team would comprise of 3-4 members.</span><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">3.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">All members MUST be well versed with programming skills</span><br style="box-sizing: border-box; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;"><span style="box-sizing: border-box; font-weight: bolder; color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">4.&nbsp;</span><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">The Selected Team have to fill a form and have to submit it while registering.</span><br></p>									</div>
+                    </div>
+                  </div> 
+    
+                                </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12">
+                  <div class="accordion">
+                  
+                   
+    
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <div class="header-title" data-toggle="collapse" data-target="#questionSix_7" aria-expanded="false" aria-controls="questionSix_7">
+                        <i class="lni-pencil"></i>  Which payment methods do you accept?									</div>
+                    </div>
+                    <div id="questionSix_7" class="collapse" aria-labelledby="headingThree" data-parent="#question">
+                      <div class="card-body">
+                        <p><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">The registered team has to pay nothing for the hackathon. Payment will be there only for accommodation.</span><br></p>									</div>
+                    </div>
+                  </div> 
+    
+                  
+                   
+    
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <div class="header-title" data-toggle="collapse" data-target="#questionSix_8" aria-expanded="false" aria-controls="questionSix_8">
+                        <i class="lni-pencil"></i> is Accommodation available?									</div>
+                    </div>
+                    <div id="questionSix_8" class="collapse" aria-labelledby="headingThree" data-parent="#question">
+                      <div class="card-body">
+                        <p><span style="color: rgb(33, 33, 33); font-family: Lato, sans-serif; font-size: 15px;">Yes, it is available at the college campus but rooms will be allowed based on First come First served on payment basis. There are only limited rooms. Prior booking is allowed through google form for second-round registration.</span><br></p>									</div>
+                    </div>
+                  </div> 
+    
+                  
+                   
+    
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <div class="header-title" data-toggle="collapse" data-target="#questionSix_9" aria-expanded="false" aria-controls="questionSix_9">
+                        <i class="lni-pencil"></i> Is this online or offline ?									</div>
+                    </div>
+                    <div id="questionSix_9" class="collapse" aria-labelledby="headingThree" data-parent="#question">
+                      <div class="card-body">
+                        <p>Till the time offline hackathon is planned. In case if COVID case increases or government guideline changes we will proceed for online hackathon.</p>									</div>
+                    </div>
+                  </div> 
+    
+                  
+                   
+    
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <div class="header-title" data-toggle="collapse" data-target="#questionSix_10" aria-expanded="false" aria-controls="questionSix_10">
+                        <i class="lni-pencil"></i> What are the benefits for me , if i participate?									</div>
+                    </div>
+                    <div id="questionSix_10" class="collapse" aria-labelledby="headingThree" data-parent="#question">
+                      <div class="card-body">
+                        <p>Every team member will get goodies worth approx 500 INR if clears round1 (Idea acceptance). If you win the hackathon&nbsp;</p><p>The first prize is for 75000</p><p>Second prize is for 50000</p><p>Third prize is for 25000</p>									</div>
+                    </div>
+                  </div> 
+    
+                  
+                   
+    
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <div class="header-title" data-toggle="collapse" data-target="#questionSix_11" aria-expanded="false" aria-controls="questionSix_11">
+                        <i class="lni-pencil"></i> What i am supposed to do after getting acceptance notification  ?									</div>
+                    </div>
+                    <div id="questionSix_11" class="collapse" aria-labelledby="headingThree" data-parent="#question">
+                      <div class="card-body">
+                        <p>After getting an approval notification, you will be submitting one more registration form sent via mail.</p><p>This google form will ask you for confirmation that you are coming to the venue.</p><p>Dates of arrival, stay requirements will be asked (if required).</p><p><br></p>									</div>
+                    </div>
+                  </div> 
+    
+                  
+                   
+    
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <div class="header-title" data-toggle="collapse" data-target="#questionSix_12" aria-expanded="false" aria-controls="questionSix_12">
+                        <i class="lni-pencil"></i> Are stay and meal free or on payment basis at venue ?									</div>
+                    </div>
+                    <div id="questionSix_12" class="collapse" aria-labelledby="headingThree" data-parent="#question">
+                      <div class="card-body">
+                        <p>Stay is free for RTU/BTU students only.</p><p>other students are required to pay 600/- per person per day which includes stay and meals.</p><p>NO TA /DA will be provided to any team from RTU-POORNIMA HACKATHON 2021</p>									</div>
+                    </div>
+                  </div> 
+    
+                  
+                          </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <section id="fq">
+      <h2>FAQ</h2>
+      <div style="display: table;">
+      <div style="display: table-cell; padding-right: 5px;">
+      <details>
+        <summary>What is the Hackathon?</summary>
+        <div class="faq__content">
+          <p>
+            Participants typically form groups of about 2-6 individuals, take out their laptops(if the event is technology themed), and dive into problems. Training workshops are a great parallel track especially for newcomers but also for all participants. The main purpose of hackathon is:
+
+1. Getting students interested in coding.
+2. Turning ideas into reality.
+3. Making students come in the team, coordinate with each other and work in a competitive environment.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What Is Graphic Design?</summary>
+        <div class="faq__content">
+          <p>
+            Graphic design is the process of visual communication and
+            problem-solving through the use of typography, photography,
+            iconography and illustration.
+          </p>
+        </div>
+      </details>
+      <details>
+        <summary>What Is JavaScript?</summary>
+        <div class="faq__content">
+          <p>
+            JavaScript, often abbreviated as JS, is a programming language
+            that conforms to the ECMAScript specification.
+          </p>
+        </div>
+      </details>
+    </div>
+    <div id="fqdisp" style="display: table-cell; padding-left: 5px;">
+      <details>
+        <summary>What is the Hackathon?</summary>
+        <div class="faq__content">
+          <p>
+            Participants typically form groups of about 2-6 individuals, take out their laptops(if the event is technology themed), and dive into problems. Training workshops are a great parallel track especially for newcomers but also for all participants. The main purpose of hackathon is:
+
+1. Getting students interested in coding.
+2. Turning ideas into reality.
+3. Making students come in the team, coordinate with each other and work in a competitive environment.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What Is Graphic Design?</summary>
+        <div class="faq__content">
+          <p>
+            Graphic design is the process of visual communication and
+            problem-solving through the use of typography, photography,
+            iconography and illustration.
+          </p>
+        </div>
+      </details>
+      <details>
+        <summary>What Is JavaScript?</summary>
+        <div class="faq__content">
+          <p>
+            JavaScript, often abbreviated as JS, is a programming language
+            that conforms to the ECMAScript specification.
+          </p>
+        </div></div>
+      </details>
+    </div>
+    </section>
+    <!-- end Price section -->
+
+    <!-- Social section -->
+    <section id="rules" class="parallax">
+      <div class="overlay">
+        <div class="container">
+          <div class="row" style="color: white;">
+            <div class="sec-title text-center white wow animated fadeInDown">
+              <h3 id="guideline" class="section-title wow fadeInUp animated" data-wow-delay="0.2s">
+                POORNIMA Hackathon Guideline</h3>
+            </div>
+
+            <div class="col-md-6 col-lg-6 col-xs-12 wow fadeInLeft animated" data-wow-delay="0.3s"
+              style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
+              <p class="intro-desc">
+
+              </p>
+
+
+              <ul class="list-specification">
+                <li><i class="lni-check-mark-circle"></i> The responsibility of the components and the materials
+                  required for developing the prototype during the "The Poornima" Hackathon 2023 lies solely on the
+                  participating teams.</li>
+
+
+              </ul>
+
+
+              <ul class="list-specification">
+                <li><i class="lni-check-mark-circle"></i> All the team members should be from the same college; no
+                  inter-college teams are allowed. However, members from different branches of the same college/
+                  institute are encouraged to form a team.
+                </li>
+
+
+              </ul>
+
+
+              <ul class="list-specification">
+                <li><i class="lni-check-mark-circle"></i> Each team would comprise of 3-4 members including the team
+                  leader. The team leader's name should be clearly specified in the letter.It is preferable , if you
+                  have one girl in your team
+                </li>
+
+
+              </ul>
+
+
+              <ul class="list-specification">
+                <li><i class="lni-check-mark-circle"></i> Clearly communicate the email-ids and mobile numbers of all
+                  team members as well.
+                </li>
+
+
+              </ul>
+
+
+              <ul class="list-specification">
+                <li><i class="lni-check-mark-circle"></i> The Team Name should be unique and not contain the name of
+                  your institute in any form.
+                </li>
+
+
+              </ul>
+
+
+              <ul class="list-specification">
+                <li><i class="lni-check-mark-circle"></i> The <a href="approval-letter.html" target="_blank"> Approval
+                    letter</a> should bear the seal of the college/ institute along with the signature of the
+                  principal/dean/ institute director.
+                </li>
+
+
+              </ul>
+
+
+              <ul class="list-specification">
+                <li><i class="lni-check-mark-circle"></i> A scanned copy of this letter in PDF form is to be mandatorily
+                  uploaded during the online application process.
+                </li>
+
+
+              </ul>
+
+
+              <ul class="list-specification">
+                <li><i class="lni-check-mark-circle"></i> If an existing project is considered for the event, the
+                  addition of newer features may be allowed as per the discretion of Judges.
+                </li>
+
+
+              </ul>
+            </div>
+
+            <div class="col-md-6 col-lg-6 col-xs-12 wow fadeInLeft animated" data-wow-delay="0.3s"
+              style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
+              <p class="intro-desc">
+
+
+              </p>
+              <ul class="list-specification">
+                <li><i class="lni-check-mark-circle"></i> No participant shall engage in any malicious/illegal
+                  activities which do not adhere to the general code of conduct for developers. Participants will be
+                  immediately disqualified if they are found indulging in malpractice.
+                </li>
+
+
+              </ul>
+
+
+              <ul class="list-specification">
+                <li><i class="lni-check-mark-circle"></i> Teams should be made up exclusively of students (or recent
+                  graduates within one year of having graduated) who are not organizers, volunteers, judges, sponsors,
+                  or in any other privileged position at the event.
+                </li>
+
+
+              </ul>
+
+
+              <ul class="list-specification">
+                <li><i class="lni-check-mark-circle"></i> Teams can use libraries, frameworks, or open-source code in
+                  their projects. Working on a project before the event and open-sourcing it for the sole purpose of
+                  using the code during the event is against the spirit of the rules and is not allowed.
+                </li>
+
+
+              </ul>
+
+
+              <ul class="list-specification">
+                <li><i class="lni-check-mark-circle"></i> Meals for participants will be provided at the venue.
+                </li>
+
+
+              </ul>
+
+
+              <ul class="list-specification">
+                <li><i class="lni-check-mark-circle"></i> No reimbursement/travel allowance will be provided by "The
+                  Poornima" Hackathon 2023.
+                </li>
+
+
+              </ul>
+
+
+              <ul class="list-specification">
+                <li><i class="lni-check-mark-circle"></i> Participants have to bear their own responsibility to
+                  safeguard their belongings during the event.
+                </li>
+
+
+              </ul>
+
+
+              <ul class="list-specification">
+                <li><i class="lni-check-mark-circle"></i> In case of any emergency or medical assistance, please reach
+                  out to the Organizers.
+                </li>
+
+
+              </ul>
+
+
+              <ul class="list-specification">
+                <li><i class="lni-check-mark-circle"></i> In case of a tie, the decision of Judges will be final and
+                  binding.
+                </li>
+
+
+              </ul>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end Social section -->
+
+    <!-- Contact section -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="sec-title text-center wow animated fadeInDown">
+            <h2>Contact</h2>
+            <p>Leave a Message</p>
+          </div>
+
+          <div class="col-md-7 contact-form wow animated fadeInLeft">
+            <form action="#" method="post">
+              <div class="input-field">
+                <input type="text" name="name" class="form-control" placeholder="Your Name..." />
+              </div>
+              <div class="input-field">
+                <input type="email" name="email" class="form-control" placeholder="Your Email..." />
+              </div>
+              <div class="input-field">
+                <input type="text" name="subject" class="form-control" placeholder="Subject..." />
+              </div>
+              <div class="input-field">
+                <textarea name="message" class="form-control" placeholder="Messages..."></textarea>
+              </div>
+              <button type="submit" id="submit" class="btn btn-blue btn-effect">
+                Send
+              </button>
+            </form>
+          </div>
+
+          <div class="col-md-5 wow animated fadeInRight">
+            <address class="contact-details">
+              <h3>Contact Us</h3>
+              <p>
+                <i class="fa fa-pencil"></i>Team<span>Poornima Hackathon</span>
+                <span>2023 </span><span>India</span>
+              </p>
+              <br />
+              <p><i class="fa fa-phone"></i>Phone: +91 9413465367</p>
+              <p><i class="fa fa-envelope"></i>piet.hackathon@poornima.org</p>
+            </address>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end Contact section -->
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.2661704535194!2d75.84818715023573!3d26.76778417267639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dc91e898380fd%3A0xeee859ae1f1b64b0!2sPoornima%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1668529773080!5m2!1sen!2sin"
+      width="100%" height="300" style="border: 0" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </main>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row text-center">
+        <div class="footer-content">
+          <div class="wow animated fadeInDown">
+            <p>Follow Us</p>
+            <!-- <p>Get Latest Updates</p> -->
+          </div>
+          <!-- <form action="#" method="post" class="subscribe-form wow animated fadeInUp">
+            <div class="input-field">
+              <input type="email" class="subscribe form-control" placeholder="Enter Your Email..." />
+              <button type="submit" class="submit-icon">
+                <i class="fa fa-paper-plane fa-lg"></i>
+              </button>
+            </div>
+          </form> -->
+          <div class="footer-social">
+            <ul>
+              <li class="wow animated zoomIn">
+                <a href="#"><i class="fa fa-instagram fa-3x"></i></a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="0.3s">
+                <a href="#"><i class="fa fa-twitter fa-3x"></i></a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="0.6s">
+                <a href="#"><i class="fa fa-facebook fa-3x"></i></a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="0.9s">
+                <a href="#"><i class="fa fa-dribbble fa-3x"></i></a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="1.2s">
+                <a href="#"><i class="fa fa-youtube fa-3x"></i></a>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Copyright &copy; 2022-2023 Design and Developed By <a href="http://iamkunal9.github.io/links/">iamkunal9</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Essential jQuery Plugins
 		================================================== -->
-		<!-- Main jQuery -->
-        <script src="js/jquery-1.11.1.min.js"></script>
-		<!-- Twitter Bootstrap -->
-        <script src="js/bootstrap.min.js"></script>
-		<!-- Single Page Nav -->
-        <script src="js/jquery.singlePageNav.min.js"></script>
-		<!-- jquery.fancybox.pack -->
-        <script src="js/jquery.fancybox.pack.js"></script>
-		<!-- Owl Carousel -->
-        <script src="js/owl.carousel.min.js"></script>
-        <!-- jquery easing -->
-        <script src="js/jquery.easing.min.js"></script>
-        <!-- Fullscreen slider -->
-        <script src="js/jquery.slitslider.js"></script>
-        <script src="js/jquery.ba-cond.min.js"></script>
-		<!-- onscroll animation -->
-        <script src="js/wow.min.js"></script>
-		<!-- Custom Functions -->
-        <script src="js/custom.js"></script>
-        <script src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js'></script>
-
-<script>
-
-$(document).ready(function() {
+  <!-- Main jQuery -->
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <!-- Twitter Bootstrap -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Single Page Nav -->
+  <script src="js/jquery.singlePageNav.min.js"></script>
+  <!-- jquery.fancybox.pack -->
+  <script src="js/jquery.fancybox.pack.js"></script>
+  <!-- Owl Carousel -->
+  <script src="js/owl.carousel.min.js"></script>
+  <!-- jquery easing -->
+  <script src="js/jquery.easing.min.js"></script>
+  <!-- Fullscreen slider -->
+  <script src="js/jquery.slitslider.js"></script>
+  <script src="js/jquery.ba-cond.min.js"></script>
+  <!-- onscroll animation -->
+  <script src="js/wow.min.js"></script>
+  <!-- Custom Functions -->
+  <script src="js/custom.js"></script>
+<script src="js/flex-slider.js"></script>
+  <script src="js/main.js"></script><script src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js'></script>
+  <script type="module" src="js/statement.js"></script>
+  <script>
+    $(document).ready(function() {
   $("#example").DataTable();
 });
+  </script>
+</body>
 
-document.querySelector("tfoot").hidden = true;
-</script>
-        <script src="js/main.js"></script>
-    </body>
 </html>
