@@ -22,9 +22,10 @@ for(i=0;i<pstatdata.length;i++){
 
 
 var data = document.createElement('tr');
-data.innerHTML = setData(pstatdata[i].sno,pstatdata[i].org,pstatdata[i].title,pstatdata[i].category,pstatdata[i].psid,pstatdata[i].domain);
+data.innerHTML = setData(i+1,pstatdata[i].organization,pstatdata[i].title,pstatdata[i].category,pstatdata[i].psid,pstatdata[i].domain);
 tabl.appendChild(data);
 }
+
 
 // console.log(pstatdata);
 

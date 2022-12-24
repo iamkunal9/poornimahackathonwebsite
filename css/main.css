@@ -1182,13 +1182,15 @@ ul.external li a:hover {
     padding: 0;
     color: #fff;
 }
-
+.external{
+    display: none;
+}
 #testimonials .sec-title h2:after {
     border-bottom: 1px solid #fff;
 }
 
 #testimonials .overlay {
-    background-color: rgba(15,155,224, 0.78);
+    background-color: rgba(186, 192, 194, 0.78);
     padding: 70px 0 40px;
 }
 
