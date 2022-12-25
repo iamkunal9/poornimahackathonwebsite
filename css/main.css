@@ -1371,7 +1371,7 @@ ul.external li a:hover {
 }
 
 #rules .overlay {
-    background: url("../img/slide_bg.png") repeat scroll 0 0 transparent;
+    background: url("../img/slide_bg.png") repeat scroll 0 0 rgba(47, 47, 47, 0.871);
     padding: 100px 0 120px;
 }
 
