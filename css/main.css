@@ -4418,3 +4418,6 @@ textarea.form-control {
     font: 16px ibm-plex-sans, sans-serif;
 }/*#DIV_82:before*/
 
+#knowmorebtn{
+    display: none;
+}
