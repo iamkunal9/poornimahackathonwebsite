@@ -1702,7 +1702,10 @@ textarea.form-control {
     }
 
     .sec-title h2:after {
-        left: 30%;
+        left: 35%;
+    }
+    #service h3{
+        margin-bottom: 45px;
     }
 
 /*navigation*/
