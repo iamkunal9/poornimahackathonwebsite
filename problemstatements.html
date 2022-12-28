@@ -1071,7 +1071,15 @@
     $(document).ready(function () {
     var t = $('#example').DataTable();
     // var counter = 1;
- 
+    function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+}
     // $('#addRow').on('click', function () {
       fetch('https://poornimahackathon.pythonanywhere.com/api/v1/problems/data', {
     method: 'GET',
@@ -1080,8 +1088,9 @@
     },
 })
 .then(response => response.json())
-.then(pstatdata => run(pstatdata))
+.then(pstatdata => run(shuffleArray(pstatdata)))
         function run(pstatdata){
+          
           for(i=0;i<pstatdata.length;i++){
         t.row.add([i+1,pstatdata[i].organization,pstatdata[i].title,pstatdata[i].category,pstatdata[i].psid,pstatdata[i].domain]).draw(false);
         }}
@@ -1089,7 +1098,6 @@
     // });
  
     // Automatically add a first row of data
-    $('#addRow').click();
 });
   </script>
 </body>
