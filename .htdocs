@@ -1,1 +1,2 @@
 ErrorDocument 404 https://hackathon.poornima.org
+ErrorDocument 403 https://hackathon.poornima.org
