@@ -163,11 +163,14 @@
 	background-image: url(../img/slider/3.jpg);
 }
 .bg-img-4 {
-	background-image: url(../img/slider/4.jpg);
+	background-image: url(../img/slider/4.jpeg);
 }
 
 .bg-img-5 {
 	background-image: url(../img/slider/5.jpeg);
+}
+.bg-img-6 {
+	background-image: url(../img/slider/6.jpeg);
 }
 
 /* Animations for content elements */
