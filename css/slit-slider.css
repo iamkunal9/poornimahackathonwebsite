@@ -155,22 +155,34 @@
 
 .bg-img-1 {
 	background-image: url(../img/slider/1.jpeg);
+	background-size: 100% 100%;
 }
+
 .bg-img-2 {
 	background-image: url(../img/slider/2.jpeg);
+	background-size: 100% 100%;
+}
+.bg-img-3-1{
+	background-image: url(../img/slider/3-1.jpeg);
+	background-size: 100% 100%;
 }
 .bg-img-3 {
 	background-image: url(../img/slider/3.jpg);
+	background-size: 100% 100%;
 }
+
 .bg-img-4 {
 	background-image: url(../img/slider/4.jpeg);
+	background-size: 100% 100%;
 }
 
 .bg-img-5 {
 	background-image: url(../img/slider/5.jpeg);
+	background-size: 100% 100%;
 }
 .bg-img-6 {
 	background-image: url(../img/slider/6.jpeg);
+	background-size: 100% 100%;
 }
 
 /* Animations for content elements */
