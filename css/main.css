@@ -1186,12 +1186,12 @@ ul.external li a:hover {
 
 
 #testimonials {
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/67/Poornima_Institute_of_Engineering_%26_Technology.JPG);
+    background-image: url(/img/parallax/Poornima_Institute_of_Engineering__Technology.webp);
     padding: 0;
     color: rgb(255, 255, 255) !important;
 }
 #agenda{
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/67/Poornima_Institute_of_Engineering_%26_Technology.JPG);
+    background-image: url(/img/parallax/Poornima_Institute_of_Engineering__Technology.webp);
     padding: 0;
     color: rgb(0, 0, 0);
 }
