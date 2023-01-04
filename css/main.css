@@ -945,7 +945,7 @@ h1.navbar-brand {
 /* Project laughtbox setup */
 
 .fancybox-item.fancybox-close {
-    background: url("../img/icons/close.png") no-repeat scroll 0 0 transparent;
+    background: url("../img/icons/close.webp") no-repeat scroll 0 0 transparent;
     height: 50px;
     right: 0;
     top: 0;
@@ -953,14 +953,14 @@ h1.navbar-brand {
 }
 
 .fancybox-next span {
-    background: url("../img/right.png") no-repeat scroll center center #009ee3;
+    background: url("../img/right.webp") no-repeat scroll center center #009ee3;
     height: 50px;
     width: 50px;
     right: 0;
 }
 
 .fancybox-prev span {
-    background: url("../img/left.png") no-repeat scroll center center #009ee3;
+    background: url("../img/left.webp") no-repeat scroll center center #009ee3;
     height: 50px;
     width: 50px;
     left: 0;
@@ -1230,7 +1230,7 @@ ul.external li a:hover {
 }
 
 .testimonial-item > div:before {
-    background-image: url("../img/icons/quotes.png");
+    background-image: url("../img/icons/quotes.webp");
     background-repeat: no-repeat;
     bottom: 127px;
     height: 33px;
@@ -1240,7 +1240,7 @@ ul.external li a:hover {
 }
 
 .testimonial-item > div:after {
-    background-image: url("../img/icons/quotes.png");
+    background-image: url("../img/icons/quotes.webp");
     background-position: -58px 0;
     background-repeat: no-repeat;
     bottom: -50px;
@@ -1370,7 +1370,7 @@ ul.external li a:hover {
 }
 
 #rules .overlay {
-    background: url("../img/slide_bg.png") repeat scroll 0 0 rgba(47, 47, 47, 0.871);
+    background: url("../img/slide_bg.webp") repeat scroll 0 0 rgba(47, 47, 47, 0.871);
     padding: 100px 0 120px;
 }
 
