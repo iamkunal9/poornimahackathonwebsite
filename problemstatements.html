@@ -62,7 +62,68 @@
   <script src="js/modernizr-2.6.2.min.js"></script>
 </head>
 
-<style>
+<style>   
+   .trigger{
+      text-align: center;
+    padding: 7px 13px;
+    background: #3e3e3e;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-family: cursive;
+}
+
+.kmodal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.kmodal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 40rem;
+    height:40rem;
+    border-radius: 0.5rem;
+    overflow: auto;
+}
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+.close-button:hover {
+    background-color: darkgray;
+}
+.show-kmodal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+.hide-kmodal {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
   .dataTables_empty {
     display: none;
   }
@@ -709,7 +770,7 @@
               <p>
                 <br>
 
-                For stay and meal you are required to pay 400/- per person per day.<br>
+                The stay is free and food is available on coupen basis<br>
 
                 NO TA /DA will be provided to any team from POORNIMA HACKATHON 2023<br>
               </p>
@@ -1152,6 +1213,7 @@
     $(document).ready(function () {
     var t = $('#example').DataTable();
     // var counter = 1;
+    
     function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
@@ -1172,14 +1234,44 @@
 .then(pstatdata => run(shuffleArray(pstatdata)))
         function run(pstatdata){
           
+
+          
           for(i=0;i<pstatdata.length;i++){
-        t.row.add([i+1,pstatdata[i].organization,pstatdata[i].title,pstatdata[i].category,pstatdata[i].psid,pstatdata[i].domain]).draw(false);
-        }}
+            var mdl = `
+    <div class="kmodal" id="k${pstatdata[i].sno}">
+      <div class="kmodal-content">
+          <span class="close-button" onclick="javascript:show('#k${pstatdata[i].sno}')">×</span>
+          <h2>Details</h2>
+          <p>${pstatdata[i].ProblemStatementDetails}</p>
+        
+          
+      </div>
+  </div>
+    `;
+        t.row.add([i+1,pstatdata[i].organization,`<a href='javascript:show("#k${pstatdata[i].sno}")'>${pstatdata[i].title}</a>${mdl}`,pstatdata[i].category,pstatdata[i].psid,pstatdata[i].domain]).draw(false);
+            // break;
+      }}
         // counter++;
     // });
  
     // Automatically add a first row of data
 });
+var iamk = 1;
+function show(data){
+  if(iamk==1){
+    document.querySelector("html").style.overflowY="hidden";
+    iamk =0;
+  }
+  else{
+    document.querySelector("html").style.overflowY="auto";
+    iamk=1;
+
+  }
+  document.querySelector(data).classList.toggle("show-kmodal");
+
+  
+}
+
   </script>
 </body>
 
