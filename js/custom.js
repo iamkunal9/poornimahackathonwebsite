@@ -31,4 +31,4 @@ function next(){
 document.querySelector(".sl-next").click();
 setTimeout(next,10000);
 }
-next();
+setTimeout(next,10000);
