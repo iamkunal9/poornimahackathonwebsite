@@ -1258,12 +1258,17 @@
 
           
           for(i=0;i<pstatdata.length;i++){
+            var kunal = pstatdata[i].ProblemStatementDetails;
+            if(kunal==null){
+              kunal=pstatdata[i].title;
+            }
             var mdl = `
+            
     <div class="kmodal" id="k${pstatdata[i].sno}">
       <div class="kmodal-content">
           <span class="close-button" onclick="javascript:show('#k${pstatdata[i].sno}')">×</span>
           <h2>Details</h2>
-          <p>${pstatdata[i].ProblemStatementDetails}</p>
+          <p>${kunal}</p>
         
           
       </div>
