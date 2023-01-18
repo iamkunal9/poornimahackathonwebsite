@@ -63,6 +63,28 @@
 </head>
 
 <style>   
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  }
+
+  #myModal img {
+    padding: 10px 10px 30px 15px;
+  }
+
+#carousel img {
+  border-radius: 10%;
+}
+
+#myBtn {
+    padding: 8px 22px;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    display: inline-flex;
+    align-items: center;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+  }
    .trigger{
       text-align: center;
     padding: 7px 13px;
@@ -117,6 +139,13 @@
     transform: scale(1.0);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
+.show-kmodal1 {
+    opacity: 1;
+    visibility: visible;
+    display: block !important;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
 .hide-kmodal {
     opacity: 0;
     visibility: hidden;
@@ -146,6 +175,13 @@
   }
 
   @media only screen and (max-width: 600px) {
+    #carousel img {
+          width: 106px;
+        }
+
+        #myModal img {
+          padding: 0px 0px 0px 0px;
+        }
     .kmodal-content {
     width: 32rem;
     height:50rem;
@@ -449,7 +485,7 @@
                   <li><img src="img/sponsors/idealab.webp"></li>
                 </span>
                 <span data-group-title="Silver Sponsors">
-                  <li><img src="img/collaborators/sincgrid.webp"></li>
+                  <li><img src="img/collaborators/sincgrid.png"></li>
                   <li><img src="img/sponsors/COMPANY.webp"></li>
                 </span>
                 <span data-group-title="Bronze Sponsors">
@@ -464,115 +500,282 @@
             <p style="font-size: 2rem; padding-bottom: 5px; color: #212121;">Meet Our</p>
             <b style="font-size: 2.5rem; color: #212121;">Industry Partners</b>
           </center><br>
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" rel="stylesheet" />
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"
+            rel="stylesheet" />
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+
+
           <section class="slider">
-            <div class="flexslider carousel">
-              <ul class="slides">
-                <li>
-                  <img src="img/collaborators/nrdc.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/R-CAT.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/ibm.jpeg" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/ciei.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/yi.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/geekster.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/gg-removebg-preview.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/aisec.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/celebal.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/accenture.jpeg" />
-                </li>
-               
-                <li>
-                  <img src="img/collaborators/helios-removebg-preview.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/karyteck-removebg-preview.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/rapid ops.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/namo.webp" />
-                </li>
-                
-                <li>
-                  <img src="img/collaborators/arya.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/coding-tail.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/verispire.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/local eyes.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/Crub_logo_.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/logo-256x256-removebg-preview.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/BNB_logo-removebg-preview.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/rent n earn.png" />
-                </li>
-                <li>
-                  <img src="img/collaborators/t.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/innovationc.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/mixorg.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/viehg.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/imt.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/robofi.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/sincgrid.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/ambition_tech.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/synoriq.webp" />
-                </li>
-                <li>
-                  <img src="img/collaborators/exeliq.webp" />
-                </li>
-              </ul>
+            <div id="carousel">
+              <div>
+                <img src="img/collaborators/nrdc.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/r cat.png" loading="lazy" />
+              </div>
+              <div>
+                <img src="img/collaborators/ibm.png" loading="lazy" />
+              </div>
+              <div>
+                <img src="img/collaborators/ciei.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/yi.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/geekster.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/good game nation.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/aiesec.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/celebal technologies.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/accenture.png" />
+              </div>
+
+              <div>
+                <img src="img/collaborators/helios web services.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/karyteck.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/rapid ops.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/namo.png" />
+              </div>
+
+              <div>
+                <img src="img/collaborators/aryavarta foundation.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/coding tale.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/verispire.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/local eyes.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/innovatio curis.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/digital darzi.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/bnb.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/rent n earn.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/t.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/innovatio curis.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/mix org.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/vieh group.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/imt patcognos.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/robofi.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/sincgrid.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/ambition technologies.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/syn0riq.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/exceliq solutions.png" />
+              </div>
             </div>
+            <div class="banner-skyblu-btn" style="text-align: center;"><a id="myBtn"
+                onclick="javascript:show1('#myModal')"> View All Partners <svg width="7" height="12" viewBox="0 0 7 12"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="stkwhbtn" d="M1.5 1.5L5.5 6L1.5 10.5" stroke="white" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg></a> </div>
+            <div id="myModal" class="modal" style="display: none; overflow-y: auto; margin: 10px 10px 10px 10px;">
+              <div class="modal-content"> <span class="close" onclick="javascript:show1('#myModal')"><img
+                    data-class="svg-images"
+                    src-url="https://business.paytm.com/s3assets/images/homepage-assets/svg/close-btn.svg?version=1673972959"
+                    alt="Payments"
+                    src="https://business.paytm.com/s3assets/images/homepage-assets/svg/close-btn.svg?version=1673972959"
+                    class="visible"></span>
+                <h3 style="text-align: center;">Our Partners</h3>
+                <div class="modal-content-data">
+                  <div class="grid-container">
+                    <div>
+                      <img src="img/collaborators/nrdc.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/r cat.png" loading="lazy" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/ibm.png" loading="lazy" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/ciei.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/yi.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/geekster.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/good game nation.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/aiesec.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/celebal technologies.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/accenture.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/helios web services.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/karyteck.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/rapid ops.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/namo.png" />
+                    </div>
+
+                    <div>
+                      <img src="img/collaborators/aryavarta foundation.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/coding tale.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/verispire.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/local eyes.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/innovatio curis.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/digital darzi.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/bnb.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/rent n earn.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/t.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/innovatio curis.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/mix org.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/vieh group.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/imt patcognos.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/robofi.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/sincgrid.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/ambition technologies.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/syn0riq.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/exceliq solutions.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </section>
         </div>
       </div>
     </section>
     <!-- end Testimonial section -->
+<script>
+   $('#carousel').slick({
+      slidesToShow: 5,
+      autoplay: true,
+      autoplaySpeed: 0,
+      speed: 3000,
+      arrows: false,
+      cssEase: 'linear',
+      infinite: true,
+      focusOnSelect: true,
+      responsive: [{
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          slidesToShow: 4
+        }
+      }, {
+        breakpoint: 580,
+        settings: {
+          arrows: false,
+          slidesToShow: 3
+        }
+      }]
+    });
 
+    var iamku = 1;
+    function show1(data) {
+      if (iamku == 1) {
+        document.querySelector("html").style.overflowY = "hidden";
+        // document.querySelector("#home-slider").style.zIndex = -1;
+        // document.querySelector("#navigation").style.zIndex = -1;
+        iamku = 0;
+      }
+      else {
+        document.querySelector("html").style.overflowY = "auto";
+        // document.getElementById("home-slider").style.zIndex = 0;
+        // document.querySelector("#navigation").style.zIndex = 25;
+        iamku = 1;
+
+      }
+      document.querySelector(data).classList.toggle("show-kmodal1");
+
+
+    }
+  </script>
 
     <!-- Price section -->
 

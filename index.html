@@ -58,8 +58,15 @@
   <script src="js/modernizr-2.6.2.min.js"></script>
 </head>
 <style>
-  html,
-  body {
+  .show-kmodal {
+    opacity: 1;
+    visibility: visible;
+    display: block !important;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  }
+
+  html, body {
     max-width: 100%;
     overflow-x: hidden;
   }
@@ -115,14 +122,17 @@
       background-image: url(img/slider/android/4.webp);
       background-size: 100% 100%;
     }
+
     .bg-img-5 {
       background-image: url(img/slider/android/5.webp);
       background-size: 100% 100%;
     }
+
     .bg-img-6 {
       background-image: url(img/slider/android/6.webp);
       background-size: 100% 100%;
     }
+
     .bg-img-7 {
       background-image: url(img/slider/android/1.webp);
       background-size: 100% 100%;
@@ -132,14 +142,24 @@
   #body {
     width: 100%;
   }
+
+  #myBtn {
+    padding: 8px 22px;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    display: inline-flex;
+    align-items: center;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+  }
 </style>
 
 <body id="body">
   <!-- preloader -->
   <div id="preloader">
-    
+
     <!-- <div class="loder-box"> -->
-      <img style="width: 50rem;
+    <img style="width: 50rem;
         background-color: rgba(0, 0, 0, 0.02);
     border-radius: 1px;
     height: 242px;
@@ -149,7 +169,7 @@
     position: absolute;
     top: 50%;
     width: 208px;" src="img/loader.gif">
-      <!-- <div class="battery"></div> -->
+    <!-- <div class="battery"></div> -->
     <!-- </div> -->
   </div>
   <!-- end preloader -->
@@ -171,9 +191,7 @@
         <!-- /responsive nav button -->
 
         <!-- logo -->
-        <img
-          src="img/icons/image-removebg-preview.webp"
-          style="width: 12rem; height: auto" />
+        <img src="img/icons/image-removebg-preview.webp" style="width: 12rem; height: auto" />
         <!-- /logo -->
       </div>
 
@@ -221,7 +239,7 @@
               </div>
             </div>
           </div>
-          
+
 
           <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15"
             data-slice1-scale="1.5" data-slice2-scale="1.5">
@@ -335,7 +353,9 @@
         End Home SliderEnd
         ==================================== -->
     <marquee width="auto" direction="fadeInLeft" height="21px">
-      <img src="https://www.fg-a.com/new/0_new2p.gif">Problem Statements Updated<img src="https://www.fg-a.com/new/0_new2p.gif"> •Last date for abstract solution submission is 31<sup>th</sup> January, 2023•
+      <img src="https://www.fg-a.com/new/0_new2p.gif">Problem Statements Updated<img
+        src="https://www.fg-a.com/new/0_new2p.gif"> •Last date for abstract solution submission is 31<sup>th</sup>
+      January, 2023•
     </marquee>
     <!-- about section -->
     <section id="about">
@@ -653,15 +673,15 @@
           </div>
 
           <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.9s">
-							<div class="service-item">
-								<div class="service-icon">
-									<i class="fa fa-heart fa-3x"></i>
-								</div>
-								
-								<h3>Open Innovation</h3>
-								<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>							 -->
-							</div>
-						</div>
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="fa fa-heart fa-3x"></i>
+              </div>
+
+              <h3>Open Innovation</h3>
+              <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>							 -->
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -680,8 +700,7 @@
 
           <ul class="project-wrapper wow animated fadeInUp">
             <li class="portfolio-item">
-              <img src="img/gallery/gallery-1.webp" loading="lazy" class="img-responsive"
-                alt="" />
+              <img src="img/gallery/gallery-1.webp" loading="lazy" class="img-responsive" alt="" />
               <!-- <figcaption class="mask">
                 <h3>Wall street</h3>
                 <p>
@@ -822,13 +841,11 @@
                 <strong>Our Sponsors</strong>
               </h1>
               <ul>
-
                 <span data-group-title="Gold Sponsor">
-
                   <li><img loading="lazy" src="img/sponsors/idealab.webp"></li>
                 </span>
                 <span data-group-title="Silver Sponsors">
-                  <li><img loading="lazy" src="img/collaborators/sincgrid.webp"></li>
+                  <li><img loading="lazy" src="img/sponsors/sincgrid.webp"></li>
                   <li><img loading="lazy" src="img/sponsors/COMPANY.webp"></li>
                 </span>
                 <span data-group-title="Bronze Sponsors">
@@ -843,105 +860,232 @@
             <p style="font-size: 2rem; padding-bottom: 5px; color: #212121;">Meet Our</p>
             <b style="font-size: 2.5rem; color: #212121;">COLLABORATORS</b>
           </center><br>
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" rel="stylesheet" />
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"
+            rel="stylesheet" />
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+
+
           <section class="slider">
-            <div class="flexslider carousel">
-              <ul class="slides">
-                <li>
-                  <img loading="lazy" src="img/collaborators/nrdc.webp" loading="lazy" />
-                </li>
-                <li>
-                  <img src="img/collaborators/R-CAT.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/ibm.jpeg" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/ciei.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/yi.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/geekster.webp" loading="lazy" />
-                </li>
-                <li>
-                  <img src="img/collaborators/gg-removebg-preview.webp" loading="lazy" />
-                </li>
-                <li>
-                  <img src="img/collaborators/aisec.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/celebal.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/helios-removebg-preview.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/karyteck-removebg-preview.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/rapid ops.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/namo.webp" loading="lazy"/>
-                </li>
-                
-                <li>
-                  <img src="img/collaborators/arya.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/coding-tail.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/verispire.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/local eyes.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/Crub_logo_.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/logo-256x256-removebg-preview.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/BNB_logo-removebg-preview.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/rent n earn.png" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/t.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/innovationc.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/mixorg.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/viehg.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/imt.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/robofi.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/sincgrid.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/ambition_tech.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/synoriq.webp" loading="lazy"/>
-                </li>
-                <li>
-                  <img src="img/collaborators/exeliq.webp" loading="lazy"/>
-                </li>
-              </ul>
+            <div id="carousel">
+              <div>
+                <img src="img/collaborators/nrdc.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/r cat.png" loading="lazy" />
+              </div>
+              <div>
+                <img src="img/collaborators/ibm.png" loading="lazy" />
+              </div>
+              <div>
+                <img src="img/collaborators/ciei.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/yi.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/geekster.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/good game nation.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/aiesec.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/celebal technologies.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/accenture.png" />
+              </div>
+
+              <div>
+                <img src="img/collaborators/helios web services.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/karyteck.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/rapid ops.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/namo.png" />
+              </div>
+
+              <div>
+                <img src="img/collaborators/aryavarta foundation.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/coding tale.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/verispire.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/local eyes.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/innovatio curis.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/digital darzi.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/bnb.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/rent n earn.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/t.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/innovatio curis.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/mix org.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/vieh group.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/imt patcognos.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/robofi.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/sincgrid.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/ambition technologies.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/syn0riq.png" />
+              </div>
+              <div>
+                <img src="img/collaborators/exceliq solutions.png" />
+              </div>
             </div>
+            <div class="banner-skyblu-btn" style="text-align: center;"><a id="myBtn"
+                onclick="javascript:show('#myModal')"> View All Partners <svg width="7" height="12" viewBox="0 0 7 12"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="stkwhbtn" d="M1.5 1.5L5.5 6L1.5 10.5" stroke="white" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg></a> </div>
+            <div id="myModal" class="modal" style="display: none; overflow-y: auto; margin: 10px 10px 10px 10px;">
+              <div class="modal-content"> <span class="close" onclick="javascript:show('#myModal')"><img
+                    data-class="svg-images"
+                    src-url="https://business.paytm.com/s3assets/images/homepage-assets/svg/close-btn.svg?version=1673972959"
+                    alt="Payments"
+                    src="https://business.paytm.com/s3assets/images/homepage-assets/svg/close-btn.svg?version=1673972959"
+                    class="visible"></span>
+                <h3 style="text-align: center;">Our Partners</h3>
+                <div class="modal-content-data">
+                  <div class="grid-container">
+                    <div>
+                      <img src="img/collaborators/nrdc.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/r cat.png" loading="lazy" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/ibm.png" loading="lazy" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/ciei.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/yi.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/geekster.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/good game nation.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/aiesec.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/celebal technologies.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/accenture.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/helios web services.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/karyteck.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/rapid ops.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/namo.png" />
+                    </div>
+
+                    <div>
+                      <img src="img/collaborators/aryavarta foundation.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/coding tale.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/verispire.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/local eyes.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/innovatio curis.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/digital darzi.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/bnb.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/rent n earn.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/t.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/innovatio curis.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/mix org.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/vieh group.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/imt patcognos.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/robofi.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/sincgrid.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/ambition technologies.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/syn0riq.png" />
+                    </div>
+                    <div>
+                      <img src="img/collaborators/exceliq solutions.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </section>
         </div>
       </div>
@@ -951,7 +1095,29 @@
 
     <!-- Price section -->
     <style>
+      .grid-container {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      }
+
+      #myModal img {
+        padding: 10px 10px 30px 15px;
+      }
+
+      #carousel img {
+        border-radius: 10%;
+      }
+
       @media screen and (max-width: 600px) {
+        #carousel img {
+          width: 106px;
+        }
+
+        #myModal img {
+          padding: 0px 0px 0px 0px;
+        }
+
         table {
           display: block;
           width: 100%;
@@ -1200,7 +1366,8 @@
               <p>
                 <br>
 
-                The stay will be free on 3-4th and food will be available on coupen basis.(Satisfactory free coupens will also be provided)<br>
+                The stay will be free on 3-4th and food will be available on coupen basis.(Satisfactory free coupens
+                will also be provided)<br>
 
                 NO TA /DA will be provided to any team from POORNIMA HACKATHON 2023<br>
               </p>
@@ -1523,7 +1690,7 @@
             <h2>Contact</h2>
             <p>Leave a Message</p>
           </div>
-          
+
 
           <div class="col-md-7 contact-form wow animated fadeInLeft">
             <form action="https://formspree.io/f/xqkokyrq" method="POST">
@@ -1596,10 +1763,10 @@
                 <a href="https://www.facebook.com/PoornimaInstitute"><i class="fa fa-facebook fa-3x"></i></a>
               </li>
               <!-- <li class="wow animated zoomIn" data-wow-delay="0.9s">
-                <a href="#"><i class="fa fa-dribbble fa-3x"></i></a>
+                <i class="fa fa-dribbble fa-3x"></i></a>
               </li> -->
               <!-- <li class="wow animated zoomIn" data-wow-delay="1.2s">
-                <a href="#"><i class="fa fa-youtube fa-3x"></i></a>
+                <i class="fa fa-youtube fa-3x"></i></a>
               </li> -->
             </ul>
           </div>
@@ -1612,7 +1779,52 @@
       </div>
     </div>
   </footer>
+  <script>
+    $('#carousel').slick({
+      slidesToShow: 5,
+      autoplay: true,
+      autoplaySpeed: 0,
+      speed: 3000,
+      arrows: false,
+      cssEase: 'linear',
+      infinite: true,
+      focusOnSelect: true,
+      responsive: [{
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          slidesToShow: 4
+        }
+      }, {
+        breakpoint: 580,
+        settings: {
+          arrows: false,
+          slidesToShow: 3
+        }
+      }]
+    });
 
+
+    var iamk = 1;
+    function show(data) {
+      if (iamk == 1) {
+        document.querySelector("html").style.overflowY = "hidden";
+        // document.querySelector("#home-slider").style.zIndex = -1;
+        // document.querySelector("#navigation").style.zIndex = -1;
+        iamk = 0;
+      }
+      else {
+        document.querySelector("html").style.overflowY = "auto";
+        // document.getElementById("home-slider").style.zIndex = 0;
+        // document.querySelector("#navigation").style.zIndex = 25;
+        iamk = 1;
+
+      }
+      document.querySelector(data).classList.toggle("show-kmodal");
+
+
+    }
+  </script>
   <!-- Essential jQuery Plugins
 		================================================== -->
   <!-- Main jQuery -->
